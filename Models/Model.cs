@@ -26,6 +26,8 @@ namespace BookMine.Models
 
             public virtual Country Nationality { get; set; }
 
+            public virtual ICollection<Book> Books { get; set; }
+
         }
 
         public class Book
@@ -36,6 +38,8 @@ namespace BookMine.Models
             public string Title { get; set; }
             [DisplayFormat(DataFormatString = "{0:M-d-yyyy}", ApplyFormatInEditMode = true)]
             public DateTime Published { get; set; }
+
+            public virtual Author Author { get; set; }
           
         }
 
